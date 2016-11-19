@@ -13,12 +13,24 @@
         public $lastname = "Tanjung";
         public $age = 20;
         
-        }
-        $student = new Person();
-        $teacher = new Person();
-        echo $teacher ->isAlive;
-        ?>
         
+        public function __construct($firstname, $lastname, $age) {
+              $this->firstname = $firstname;
+              $this->lastname = $lastname;
+              $this->age = $age;
+            }
+            
+           
+        public function greet() {
+              return "Hello, my name is " . $this->firstname . " " . $this->lastname . ". Nice to meet you! :-)";
+            }
+        }
+          
+        
+        $me = new Person('boring', '12345', 12345);
+     
+        echo $me->greet(); 
+        ?>
       </p>
     </body>
 </html>
